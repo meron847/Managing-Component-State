@@ -1,7 +1,9 @@
+import { useState } from "react";
+
 const Message = ()=> {
-let count = 0;
-count ++;
-    return <div>Message {count}</div>;
+let count = 1
+    return <div>Message{count} </div>;
 }
+
 export default Message;
 
