@@ -1,46 +1,15 @@
-import { useState } from "react";
-//import ExpandableText from "./assets/component/ExpandableText";
+import React from 'react'
+import ExpandableText from './assets/component/ExpandableText'
 
-
-function App() {
-  const [game, setGame]=useState({
-    id:1,
-    player:{
-      name:"jone",
-    }
-  });
-
-  const[pizza,setPizza]= useState({
-name:'Spicy Pepperni',
-toppings:['Mushroom']
-  });
-
-  const [cart, setCart] =useState({
-     discount:.1,
-     items:[
-      {id:1, title: 'Product 1', quantity:1},
-      {id:2, title: 'Product 2', quantity:1},
-     
-     ]
-  })
-
-
-  const handleClick=()=>{
-    setGame({...game, player:{...game.player, name: 'Bob'}})//to change the name
-   
-    setPizza({...pizza,toppings:[...pizza.toppings,'chees']})//to add new element
-
-    setCart({...cart, items: cart.items.map(item => item.id === 1 ? {...item, quantity: item.quantity+1}: item)})
-  }//to add a quantity by 1 when a custumer click the first id
+function App(){
   return (
     <div>
-     
-      <button onClick={handleClick}></button>
+      <ExpandableText >
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat culpa soluta totam quo asperiores consequatur, nostrum, voluptate officia doloremque magnam ipsum voluptates rem eveniet ducimus quidem exercitationem porro. Officiis sit nobis, molestias facilis ipsam dignissimos magni blanditiis consequuntur ipsa velit obcaecati animi delectus omnis natus, ipsum quod eos ut reprehenderit ex voluptatibus iure quaerat aspernatur maiores sed. Ipsam consequatur quasi vel tempora molestiae, facere quisquam! Ratione, et tempora? Totam provident voluptatum accusantium, labore laudantium in ipsam quisquam animi quis similique delectus tempore perferendis nobis ad ipsa quam iste quae repellat? Nesciunt laboriosam, vitae culpa at ipsa possimus libero expedita.
+      </ExpandableText>
     </div>
   )
-
+}
 
 export default App;
-    
 
-}
